@@ -1,0 +1,33 @@
+uuid: 6045cfbd-f99d-43cc-8b2d-e78f14a41d31
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.buy-link
+  module:
+    - node
+    - system
+  theme:
+    - olivero
+id: olivero_buylink
+theme: olivero
+region: content_below
+weight: 0
+provider: null
+plugin: 'system_menu_block:buy-link'
+settings:
+  id: 'system_menu_block:buy-link'
+  label: 'Buy link'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      products: products

@@ -1,0 +1,11 @@
+buy_product.buy_form:
+  path: '/buy-product/{node}'
+  defaults:
+    _form: '\Drupal\buy_product\Form\AddressForm'
+    _title: 'Buy Product'
+  requirements:
+    _permission: 'buy product'
+  options:
+    parameters:
+      node:
+        type: entity:node
