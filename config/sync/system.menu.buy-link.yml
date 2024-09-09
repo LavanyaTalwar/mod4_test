@@ -1,0 +1,8 @@
+uuid: 8530a1ce-0823-4ff6-a416-33e5c38f8c4f
+langcode: en
+status: true
+dependencies: {  }
+id: buy-link
+label: 'Buy link'
+description: ''
+locked: false

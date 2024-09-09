@@ -1,0 +1,55 @@
+uuid: b4b011c1-a919-4300-8f3f-05f8c0d55a57
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.page
+    - node.type.products
+    - taxonomy.vocabulary.tags
+  module:
+    - comment
+    - contextual
+    - file
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+_core:
+  default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
+id: content_editor
+label: 'Content admin'
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'administer url aliases'
+  - 'create article content'
+  - 'create page content'
+  - 'create products content'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'delete any products content'
+  - 'delete article revisions'
+  - 'delete own article content'
+  - 'delete own files'
+  - 'delete own page content'
+  - 'delete own products content'
+  - 'delete page revisions'
+  - 'delete products revisions'
+  - 'edit any products content'
+  - 'edit own article content'
+  - 'edit own comments'
+  - 'edit own page content'
+  - 'edit own products content'
+  - 'edit terms in tags'
+  - 'revert all revisions'
+  - 'revert products revisions'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'

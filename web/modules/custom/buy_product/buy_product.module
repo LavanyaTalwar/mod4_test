@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Implements hook_entity_view_alter() to add a "Buy Now" button to the product page.
+ */
+function buy_product_entity_view_alter(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'products') {
+    $node_id = $entity->id();
+    $url = \Drupal\Core\Url::fromRoute('buy_product.buy_form', ['node' => $node_id], ['query' => ['destination' => \Drupal::request()->getRequestUri()]]);
+    $link = [
+      '#type' => 'link',
+      '#title' => t('Buy Now'),
+      '#url' => $url,
+      '#attributes' => ['class' => ['button']],
+    ];
+    $build['buy_now_link'] = [
+      '#markup' => \Drupal::service('renderer')->render($link),
+      '#weight' => 10,
+    ];
+  }
+}

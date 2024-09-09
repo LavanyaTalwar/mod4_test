@@ -1,0 +1,5 @@
+name: 'Buy Product'
+type: module
+description: 'Module to implement product buying functionality and address storage.'
+core_version_requirement: ^9 || ^10
+package: Custom
